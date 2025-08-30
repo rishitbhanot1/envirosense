@@ -1,5 +1,3 @@
-Here’s a polished, practical, and visually beautiful **README** draft for your project **EnviroSense**:
-
 ---
 
 # 🌍 EnviroSense
