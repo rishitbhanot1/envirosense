@@ -1,3 +1,4 @@
+
 ---
 
 # 🌍 EnviroSense
@@ -54,7 +55,7 @@ The tool is aimed at:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/rishitbhanot/envirosense.git
+git clone https://github.com/rishitbhanot1/envirosense.git
 cd envirosense
 ```
 
