@@ -133,5 +133,3 @@ Contributions are welcome! Please fork the repo, make your changes, and submit a
 💡 *Breathe Easy. Predict Smart. Choose EnviroSense.* 🌿
 
 ---
-
-Would you like me to also **design badges (e.g., Python version, build status, license, contributors)** for the header to make it look like a professional GitHub README?
