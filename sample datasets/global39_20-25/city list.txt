@@ -1,0 +1,39 @@
+Amsterdam
+Athens
+Bangkok
+Beijing
+Berlin
+Buenos Aires
+Cairo
+Chicago
+Delhi
+Dubai
+Hanoi
+Hong Kong
+Istanbul
+Jakarta
+Johannesburg
+Karachi
+Kolkata
+Lagos
+Lima
+London
+Los Angeles
+Madrid
+Manila
+Mexico City
+Moscow
+Mumbai
+New York
+Paris
+Rio de Janeiro
+Riyadh
+Seoul
+Shanghai
+Singapore
+Sydney
+São Paulo
+Tehran
+Tokyo
+Toronto
+Zurich
