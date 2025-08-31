@@ -13,10 +13,10 @@
 It processes pollutant data, applies **standardized AQI breakpoints (CPCB/US EPA)**, and uses multiple models (Linear Regression, Decision Tree, Random Forest, XGBoost) to provide accurate AQI predictions along with confidence levels.
 
 The tool is aimed at:
-✔️ Environmental researchers
-✔️ Policy makers
-✔️ Smart city planners
-✔️ Everyday citizens who care about clean air
+*✔️ Environmental researchers
+*✔️ Policy makers
+*✔️ Smart city planners
+*✔️ Everyday citizens who care about clean air
 
 ---
 
