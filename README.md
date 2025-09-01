@@ -1,4 +1,3 @@
-
 ---
 
 # 🌍 EnviroSense
@@ -31,6 +30,7 @@ The tool is aimed at:
   * Decision Tree
   * Random Forest
   * XGBoost
+    
 * ✅ **Model Evaluation**: Accuracy, RMSE, R², confidence percentage.
 * 🔮 **Prediction mode**: Enter **city** + **date** → Get AQI predictions across models.
 * 🏆 **Best model recommendation** with confidence score.
@@ -47,6 +47,7 @@ The tool is aimed at:
   * Visualization: `matplotlib`, `seaborn`
   * ML Models: `scikit-learn`, `xgboost`
   * UI/File Handling: `tkinter`, `google.colab` (for Colab support)
+  * Date Handling: `calendar` 
 
 ---
 
