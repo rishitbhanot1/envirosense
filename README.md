@@ -8,7 +8,7 @@
 ![Static Badge](https://img.shields.io/badge/status-pre--release-yellow)
 
 ![Static Badge](https://img.shields.io/badge/version-v0.2__cottoncandy-blue)
-
+[![version](https://img.shields.io/github.com/rishitbhanot1/envirosense/releases/tag/cottoncandy?label=version&style=flat-square)](https://github.com/rishitbhanot1/envirosense/releases/tag/cottoncandy)
 
 ---
 
