@@ -5,6 +5,11 @@
 
 *Smart Air Quality Prediction & Insights*
 
+![Static Badge](https://img.shields.io/badge/status-pre--release-yellow)
+
+![Static Badge](https://img.shields.io/badge/version-v0.2__cottoncandy-blue)
+
+
 ---
 
 ## 📖 Overview
