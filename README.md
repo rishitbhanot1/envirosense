@@ -30,14 +30,16 @@ The tool is aimed at:
 * 📂 **Dataset ingestion**: Upload your own AQI dataset.
 * ⚗️ **Data preprocessing**: Missing values handled, pollutants standardized.
 * 📊 **AQI computation**: Based on pollutants (PM2.5, PM10, NO₂, SO₂, CO, O₃).
+* 🔑 **CPCB Breakpoints**: Using pollutant breakpoints and official computing standards from Central Pollution Control Board.
+* ❤️ **Differentiator**: Backend self computation of AQI, so you can use the raw pollutant dataset even without the AQI to train.
 * 🧠 **Multiple ML Models**:
 
   * Linear Regression
   * Decision Tree
-  * Random Forest
-  * XGBoost
+  * Random Forest Regressor
+  * XGBoostRegressor
     
-* ✅ **Model Evaluation**: Accuracy, RMSE, R², confidence percentage.
+* ✅ **Model Evaluation**: MAE, RMSE, R², confidence percentage.
 * 🔮 **Prediction mode**: Enter **city** + **date** → Get AQI predictions across models.
 * 🏆 **Best model recommendation** with confidence score.
 * 🎨 **Visualizations**: R² comparison, confusion matrices, performance metrics.
