@@ -5,10 +5,10 @@
 
 *Smart Air Quality Prediction & Insights*
 
-![Static Badge](https://img.shields.io/badge/status-pre--release-yellow)
+![status](https://img.shields.io/badge/status-pre--release-white) [![version](https://img.shields.io/badge/version-v0.2-blue)](https://github.com/rishitbhanot1/envirosense/releases/tags/cottoncandy) [![version](https://img.shields.io/badge/script-cottoncandy-orange)](https://github.com/rishitbhanot1/envirosense/releases/tags/cottoncandy) [![Python](https://img.shields.io/badge/Python-3.9%2B-violet)](https://www.python.org/) [![USP](https://img.shields.io/badge/USP-AQI%20Auto--Computation%20✅-purple)](https://github.com/rishitbhanot1/envirosense?tab=readme-ov-file#-features)
+ [![issues](https://img.shields.io/github/issues/rishitbhanot1/envirosense)](https://github.com/rishitbhanot1/envirosense/issues)
 
-![Static Badge](https://img.shields.io/badge/version-v0.2__cottoncandy-blue)
-[![version](https://img.shields.io/github.com/rishitbhanot1/envirosense/releases/tag/cottoncandy?label=version&style=flat-square)](https://github.com/rishitbhanot1/envirosense/releases/tag/cottoncandy)
+
 
 ---
 
