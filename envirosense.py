@@ -47,6 +47,33 @@ else:
     print("⚠️ 'Date' column not found. Predictions that require exact date will use proxies instead.")
 
 # ---------------------------
+# 2b) Fill NaNs using neighbor-median (3 before + 3 after)
+# ---------------------------
+def fillna_with_neighbor_median(df, cols=None, n=3, groupby=None, sort_by=None, inplace=False):
+    window = 2 * n + 1
+    df_out = df if inplace else df.copy()
+    if cols is None:
+        cols = df_out.select_dtypes(include=[np.number]).columns.tolist()
+    def _apply_block(block):
+        if sort_by is not None:
+            block = block.sort_values(sort_by)
+        for c in cols:
+            med = block[c].rolling(window=window, center=True, min_periods=1).median()
+            block[c] = block[c].fillna(med)
+        if sort_by is not None:
+            block = block.sort_index()
+        return block
+    if groupby is not None:
+        df_out = df_out.groupby(groupby, group_keys=False).apply(_apply_block)
+    else:
+        df_out = _apply_block(df_out)
+    return df_out
+
+# Apply neighbor-median fill per City, ordered by Date
+pollutants = ["PM2.5","PM10","NO2","SO2","CO","O3","Temperature","Humidity"]
+df = fillna_with_neighbor_median(df, cols=pollutants, n=3, groupby="City", sort_by="Date")
+
+# ---------------------------
 # 3) CPCB AQI Sub-Index Calculation
 # ---------------------------
 breakpoints = {
@@ -108,23 +135,31 @@ models = {
     "XGBoost": XGBRegressor(n_estimators=300, learning_rate=0.05, max_depth=6, random_state=42)
 }
 
-denom_for_conf = max(1e-6, y_test.mean())
+# compact skill-vs-city-mean confidence + per-city MAE
+city_mean_map = pd.Series(y_train.values, index=city_train.index).groupby(city_train).mean().to_dict()
+global_median = y_train.median()
+baseline_preds = city_test.map(lambda c: city_mean_map.get(c, global_median)).values
+mae_baseline = mean_absolute_error(y_test, baseline_preds)
+
 for name, model in models.items():
-    model.fit(X_train,y_train)
+    model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
-    mae = mean_absolute_error(y_test,y_pred)
-    rmse = np.sqrt(mean_squared_error(y_test,y_pred))
-    r2 = r2_score(y_test,y_pred)
-    overall_conf = float(max(0.0,min(100.0,100.0-(mae/denom_for_conf)*100.0)))
+    mae = mean_absolute_error(y_test, y_pred)
+    rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+    r2 = r2_score(y_test, y_pred)
 
-    results.loc[name] = [round(mae,3), round(rmse,3), round(r2,4), round(overall_conf,2)]
+    skill = (mae_baseline - mae) / max(1e-6, mae_baseline)
+    conf = float(np.clip(skill * 100.0, 0.0, 100.0))
 
-    per_city_mae[name] = {}
-    y_pred_s = pd.Series(y_pred,index=y_test.index)
-    for c in np.unique(city_test.values):
-        idx = city_test[city_test==c].index
-        if len(idx)>=3:
-            per_city_mae[name][c] = mean_absolute_error(y_test.loc[idx], y_pred_s.loc[idx])
+    results.loc[name] = [round(mae, 3), round(rmse, 3), round(r2, 4), round(conf, 2)]
+
+    y_pred_s = pd.Series(y_pred, index=y_test.index)
+    per_city_mae[name] = {
+        c: mean_absolute_error(y_test.loc[idx], y_pred_s.loc[idx])
+        for c in np.unique(city_test.values)
+        for idx in [city_test[city_test == c].index]
+        if len(idx) >= 3
+    }
 
 print("\n📊 Regression Performance:")
 print(results)
