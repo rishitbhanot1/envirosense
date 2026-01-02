@@ -25,7 +25,7 @@ The tool is aimed at:
 
 ---
 
-## Project Status
+## Project Status - as of 01/02/2026
 
 This project is **completed** and **no longer actively maintained**.  
 Development concluded during pre-release, and the repository has since been **deprioritized**. No further updates are planned and no additional changes are expected.
