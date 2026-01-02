@@ -25,6 +25,13 @@ The tool is aimed at:
 
 ---
 
+## Project Status
+
+This project is **completed** and **no longer actively maintained**.  
+Development concluded during pre-release, and the repository has since been **deprioritized**. No further updates are planned and no additional changes are expected.
+
+---
+
 ## ✨ Features
 
 * 📂 **Dataset ingestion**: Upload your own AQI dataset.
