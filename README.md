@@ -5,7 +5,7 @@
 
 *Smart Air Quality Prediction & Insights*
 
-![status](https://img.shields.io/badge/status-pre--release-white) [![version](https://img.shields.io/badge/version-v0.3-blue)](https://github.com/rishitbhanot1/envirosense/releases/tag/tiramisu) [![version](https://img.shields.io/badge/script-tiramisu-orange)](https://github.com/rishitbhanot1/envirosense/blob/main/scripts/v3_tiramisu.py) [![Python](https://img.shields.io/badge/Python-3.9%2B-violet)](https://www.python.org/) [![USP](https://img.shields.io/badge/USP-AQI%20Auto--Computation%20✅-purple)](https://github.com/rishitbhanot1/envirosense?tab=readme-ov-file#-features)
+![status](https://img.shields.io/badge/status-deprioritized-red) [![version](https://img.shields.io/badge/version-v0.3-blue)](https://github.com/rishitbhanot1/envirosense/releases/tag/tiramisu) [![version](https://img.shields.io/badge/script-tiramisu-orange)](https://github.com/rishitbhanot1/envirosense/blob/main/scripts/v3_tiramisu.py) [![Python](https://img.shields.io/badge/Python-3.9%2B-violet)](https://www.python.org/) [![USP](https://img.shields.io/badge/USP-AQI%20Auto--Computation%20✅-purple)](https://github.com/rishitbhanot1/envirosense?tab=readme-ov-file#-features)
  [![issues](https://img.shields.io/github/issues/rishitbhanot1/envirosense)](https://github.com/rishitbhanot1/envirosense/issues)
 
 
